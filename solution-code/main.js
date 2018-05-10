@@ -50,6 +50,7 @@ for(var i = 0; i < animals.length; i++) {
 	animals[i].makeNoise();
 }
 
+
 /*
 	Part 3: Let's see how hungry these animals get by adding a "hunger" property to them.
 	Use a for-loop to iterate through the array of animals and add a "hunger" property with

@@ -5,6 +5,38 @@
 	and a makeNoise property that prints out their noise.
 */
 
+var dog = {
+	name: 'doggo',
+	noise: 'bark',
+	makeNoise: function() {
+		console.log(this.noise)
+	}
+}
+
+var cat = {
+	name: 'kitten',
+	noise: 'meowmeow',
+	makeNoise: function() {
+		console.log(this.noise)
+	}
+}
+
+var bird = {
+	name: 'fkn bird',
+	noise: 'annoying screech',
+	makeNoise: function() {
+		console.log(this.noise)
+	}
+}
+
+var mouse = {
+	name: 'mouse',
+	noise: 'squeakin',
+	makeNoise: function() {
+		console.log(this.noise)
+	}
+}
+
 /*
 	Part 2: Let's use an array to hold all of these animals.
 	Create a new variable, animals, that contains the 4 animals we just created.
@@ -13,6 +45,15 @@
 
 	Hint: Use the makeNoise() function for each animal in the array
 */
+
+var animals = ['doggo', 'kitten', 'fkn bird', 'mouse']
+
+for (var i=0; i < animals.length; i++) {
+	animals[i].makeNoise;
+	console.log(animals[i].makeNoise);
+}
+
+
 
 /*
 	Part 3: Let's see how hungry these animals get by adding a "hunger" property to them.
@@ -24,6 +65,10 @@
 	myObject.newPropertyName = newValue; // or...
 	myObject['newPropertyName'] = newValue;
 */
+
+for (var i=0; i < animals.length; i++) {
+	animals[i].hunger = 10;
+}
 
 /*
 	Part 4: These animals should be able to walk. Let's add a new "walk" property to them.
@@ -43,6 +88,13 @@
 
 	Hint: You will need the "this" keyword
 */
+
+for(var i=0; i < animals.length; i++) {
+	animals[i].walk = function() {
+		console.log (this.name + 'took a walk');
+		this.hunger --;
+	}
+}
 
 /*
 	Part 5: Now these animals can walk and talk by themselves, but they're quite lonely.
@@ -66,6 +118,11 @@
 	// => "chirp quack"
 */
 
+for(var i=0; i < animals.length; i++) {
+	animals[i].makeFriend = function(otherAnimal) {
+		this.friend = otherAnimal;
+	}
+}
 
 /* BONUS
 This bonus will be a challenge! To complete this step, you'll need to do some Googling to look up things that have not yet been covered.
